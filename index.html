@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <title>リマインドカレンダー アカウントリンク</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h3 my-5">リマインドカレンダー</h1>
+      <p class="lead mb-5">リマインドカレンダーと利用するにはGoogleカレンダーとアカウントリンクで連携する必要があります。</p>
+      <a id="link" href="#" class="btn btn-danger btn-block btn-lg">
+        <span style="font-size: 2rem;" class="mr-2">
+          <i class="fab fa-google"></i>
+        </span>
+        アカウントリンクする
+      </a>
+    </div>
+    <script>
+      function setLink() {
+        let url = "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force";
+        let target = document.getElementById("link");
+        let queryStr = window.location.search.slice(1);
+        url += "&" + queryStr;
+        target.href = url;
+      }      
+      setLink();
+    </script>
+  </body>
+</html>
