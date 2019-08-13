@@ -1,0 +1,27 @@
+---
+layout: default
+title: GoogleアカウントとのOAuth
+description: GoogleアカウントとOAuthで認証します。
+---
+<body>
+  <div class="container">
+    <h1 class="h3 my-5">リマインドカレンダー</h1>
+    <p class="lead mb-5">リマインドカレンダーを利用するにはGoogleカレンダーとアカウントリンクで連携する必要があります。</p>
+    <a id="link" href="#" class="btn btn-danger btn-block btn-lg">
+      <span style="font-size: 2rem;" class="mr-2">
+        <i class="fab fa-google"></i>
+      </span>
+      アカウントリンクする
+    </a>
+  </div>
+  <script>
+    function setLink() {
+      let url = "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force";
+      let target = document.getElementById("link");
+      let queryStr = window.location.search.slice(1);
+      url += "&" + queryStr;
+      target.href = url;
+    }      
+    setLink();
+  </script>
+</body>
