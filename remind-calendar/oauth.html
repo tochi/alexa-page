@@ -8,7 +8,7 @@ layout: default
     <p class="lead mb-5">リマインドカレンダーはAlexaでGoogleカレンダーと連携して予定をリマインドしてくれるスキルです。<br>
       リマインドカレンダーを利用するにはGoogleカレンダーとアカウントリンクで連携する必要があります。</p>
     <div class="text-center">
-      <a id="link" href="#">
+      <a id="js-link" href="#">
         <img src="./images/sign-in-with-google.png" alt="Sign in with Google" class="img-fluid mx-auto">
       </a>
     </div>
@@ -18,13 +18,11 @@ layout: default
     </ul>
   </div>
   <script>
-    function setLink() {
+    document.getElementById("js-link").addEventListener("click", function(){
       let url = "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force";
-      let target = document.getElementById("link");
       let queryStr = window.location.search.slice(1);
       url += "&" + queryStr;
-      target.href = url;
-    }      
-    setLink();
+      window.location.url = url;
+    });
   </script>
 </body>
