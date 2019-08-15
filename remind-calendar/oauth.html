@@ -22,7 +22,7 @@ layout: default
       let url = "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force";
       let queryStr = window.location.search.slice(1);
       url += "&" + queryStr;
-      window.location.url = url;
+      window.location.href = url;
     });
   </script>
 </body>
