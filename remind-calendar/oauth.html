@@ -2,21 +2,19 @@
 layout: default
 ---
 <body>
-  <div class="container">
-    <h1 class="h3 mb-2">リマインドカレンダー</h1>
-    <image src="./images/logo.png" class="rounded mx-auto d-block" alt="リマインドカレンダー"  style="width: 150px; height: auto;" />
-    <p class="lead mb-5">リマインドカレンダーはGoogleカレンダーと連携して予定をリマインドしてくれるスキルです。<br>
-      リマインドカレンダーを利用するにはGoogleカレンダーとアカウントリンクで連携する必要があります。</p>
-    <div class="text-center">
-      <a id="js-link" href="#">
-        <img src="./images/sign-in-with-google.png" alt="Sign in with Google" class="img-fluid mx-auto">
-      </a>
-    </div>
-    <ul class="mt-5">
-      <li><a href="./privacy.html">プライバシーポリシー</a></li>
-      <li><a href="./term.html">利用規約</a></li>
-    </ul>
+  <h1 class="mb-5"><img src="images/logo.png" class="img-thumbnail mr-3" style="width: 80px; height: auto;" />リマインドカレンダー</h1>
+  <p class="lead mb-5">リマインドカレンダーはGoogleカレンダーと連携して予定をリマインドしてくれるスキルです。<br>
+    リマインドカレンダーを利用するにはGoogleカレンダーとアカウントリンクで連携する必要があります。</p>
+  <div class="text-center">
+    <a id="js-link" href="#">
+      <img src="./images/sign-in-with-google.png" alt="Sign in with Google" class="img-fluid mx-auto">
+    </a>
   </div>
+  <ul class="list-inline mt-5">
+    <li class="list-inline-item"><a href="./index.html">ホーム</a></li>
+    <li class="list-inline-item"><a href="./privacy.html">プライバシポリシー</a></li>
+    <li class="list-inline-item"><a href="./term.html">利用規約</a></li>
+  </ul> 
   <script>
     document.getElementById("js-link").addEventListener("click", function(){
       let url = "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force";
